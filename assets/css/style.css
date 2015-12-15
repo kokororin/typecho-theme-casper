@@ -1,9 +1,13 @@
 /*
 This theme is copied from Casper
 */
+
+
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
+
+
 /*
 
     0.  Normalize
@@ -22,28 +26,17 @@ This theme is copied from Casper
     13. Animations
 
 */
+
+
 /* ==========================================================================
    0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
 
-audio,
-canvas,
-video {
+audio, canvas, video {
     display: inline-block;
 }
 
@@ -52,8 +45,7 @@ audio:not([controls]) {
     height: 0;
 }
 
-[hidden],
-template {
+[hidden], template {
     display: none;
 }
 
@@ -75,8 +67,7 @@ a:focus {
     outline: thin dotted;
 }
 
-a:active,
-a:hover {
+a:active, a:hover {
     outline: 0;
 }
 
@@ -89,8 +80,7 @@ abbr[title] {
     border-bottom: 1px dotted;
 }
 
-b,
-strong {
+b, strong {
     font-weight: 700;
 }
 
@@ -109,10 +99,7 @@ mark {
     color: #000;
 }
 
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
     font-family: monospace, serif;
     font-size: 1em;
 }
@@ -129,8 +116,7 @@ small {
     font-size: 80%;
 }
 
-sub,
-sup {
+sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -168,40 +154,30 @@ legend {
     padding: 0;
 }
 
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
     font-family: inherit;
     font-size: 100%;
     margin: 0;
 }
 
-button,
-input {
+button, input {
     line-height: normal;
 }
 
-button,
-select {
+button, select {
     text-transform: none;
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
 }
 
-button[disabled],
-html input[disabled] {
+button[disabled], html input[disabled] {
     cursor: default;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
 }
@@ -213,13 +189,11 @@ input[type="search"] {
     box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -233,9 +207,13 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
+
+
 /* Import the font file with the icons in it */
 
 @font-face {
@@ -245,10 +223,11 @@ table {
     font-weight: normal;
     font-style: normal;
 }
+
+
 /* Apply these base styles to all icons */
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: "casper-icons", "Open Sans", sans-serif;
     speak: none;
     font-style: normal;
@@ -260,6 +239,8 @@ table {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
 
@@ -305,11 +286,15 @@ table {
 .icon-menu:before {
     content: "\f609";
 }
+
+
 /*
     IMPORTANT: When making any changes to the icon font, be sure to increment
     the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
     This forces browsers to download the new font file.
 */
+
+
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
@@ -343,12 +328,7 @@ body {
     background: #D6EDFF;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -395,10 +375,7 @@ a:hover {
     color: #111;
 }
 
-p,
-ul,
-ol,
-dl {
+p, ul, ol, dl {
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
@@ -406,15 +383,11 @@ dl {
     text-rendering: geometricPrecision;
 }
 
-ol,
-ul {
+ol, ul {
     padding-left: 3rem;
 }
 
-ol ol,
-ul ul,
-ul ol,
-ol ul {
+ol ol, ul ul, ul ol, ol ul {
     margin: 0 0 0.4em 0;
     padding-left: 2em;
 }
@@ -489,8 +462,7 @@ mark {
     background-color: #fdffb6;
 }
 
-code,
-tt {
+code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
@@ -515,8 +487,7 @@ pre {
     border-radius: 3px;
 }
 
-pre code,
-pre tt {
+pre code, pre tt {
     font-size: inherit;
     white-space: pre-wrap;
     background: transparent;
@@ -547,8 +518,7 @@ table {
     background-color: transparent;
 }
 
-table th,
-table td {
+table th, table td {
     padding: 8px;
     line-height: 20px;
     text-align: left;
@@ -560,12 +530,7 @@ table th {
     color: #000;
 }
 
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td {
     border-top: 0;
 }
 
@@ -577,34 +542,36 @@ table table table {
     background-color: #FFF;
 }
 
-table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
+table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
     background-color: #F6F6F6;
 }
 
-table.plain tbody > tr:nth-child(odd) > td,
-table.plain tbody > tr:nth-child(odd) > th {
+table.plain tbody > tr:nth-child(odd) > td, table.plain tbody > tr:nth-child(odd) > th {
     background: transparent;
 }
 
-iframe,
-.fluid-width-video-wrapper {
+iframe, .fluid-width-video-wrapper {
     display: block;
     margin: 1.75em 0;
 }
+
+
 /* When a video is inside the fitvids wrapper, drop the
 margin on the iframe, cause it breaks stuff. */
 
 .fluid-width-video-wrapper iframe {
     margin: 0;
 }
+
+
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
+
+
 /* Clears shit */
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
     content: " ";
     display: table;
 }
@@ -616,6 +583,8 @@ margin on the iframe, cause it breaks stuff. */
 .clearfix {
     zoom: 1;
 }
+
+
 /* Hides shit */
 
 .hidden {
@@ -623,6 +592,8 @@ margin on the iframe, cause it breaks stuff. */
     visibility: hidden;
     display: none;
 }
+
+
 /* Creates a responsive wrapper that makes our content scale nicely */
 
 .inner {
@@ -631,12 +602,16 @@ margin on the iframe, cause it breaks stuff. */
     max-width: 710px;
     margin: 0 auto;
 }
+
+
 /* Centres vertically yo. (IE8+) */
 
 .vertical {
     display: table-cell;
     vertical-align: middle;
 }
+
+
 /* Wraps the main content & footer */
 
 .site-wrapper {
@@ -656,9 +631,13 @@ body.nav-opened .site-wrapper {
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
 }
+
+
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
+
+
 /* Big cover image on the home page */
 
 .main-header {
@@ -687,6 +666,8 @@ body.nav-opened .site-wrapper {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
 }
+
+
 /* Navigation */
 
 body.nav-opened .nav-cover {
@@ -753,8 +734,7 @@ body.nav-opened .nav {
     outline: 0;
 }
 
-.nav-close:before,
-.nav-close:after {
+.nav-close:before, .nav-close:after {
     content: '';
     position: absolute;
     top: 0;
@@ -778,8 +758,7 @@ body.nav-opened .nav {
     transform: rotate(-45deg);
 }
 
-.nav-close:hover:before,
-.nav-close:hover:after {
+.nav-close:hover:before, .nav-close:hover:after {
     background: rgb(255, 255, 255);
 }
 
@@ -835,15 +814,11 @@ body.nav-opened .nav {
     height: 1px;
 }
 
-.nav a:link,
-.nav a:visited {
+.nav a:link, .nav a:visited {
     color: #B8B8B8;
 }
 
-.nav li.nav-current a,
-.nav a:hover,
-.nav a:active,
-.nav a:focus {
+.nav li.nav-current a, .nav a:hover, .nav a:active, .nav a:focus {
     color: #fff;
 }
 
@@ -860,7 +835,6 @@ body.nav-opened .nav {
     padding: 0 20px;
     color: #111 !important;
     /* Overides `.nav a:link, .nav a:visited` colour */
-    
     text-align: center;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
@@ -876,6 +850,8 @@ body.nav-opened .nav {
     font-size: 9px;
     margin-right: 6px;
 }
+
+
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 
 .scroll-down {
@@ -897,6 +873,8 @@ body.nav-opened .nav {
     -webkit-animation: bounce 4s 2s infinite;
     animation: bounce 4s 2s infinite;
 }
+
+
 /* Stop it bouncing and increase contrast when hovered */
 
 .scroll-down:hover {
@@ -904,6 +882,8 @@ body.nav-opened .nav {
     -webkit-animation: none;
     animation: none;
 }
+
+
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
 
@@ -919,14 +899,15 @@ body.nav-opened .nav {
     margin-left: -75px;
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
 }
+
+
 /* Hide when there's no cover image or on page2+ */
 
-.no-cover .scroll-down,
-.no-cover.main-header:after,
-.archive-template .scroll-down,
-.archive-template .main-header:after {
+.no-cover .scroll-down, .no-cover.main-header:after, .archive-template .scroll-down, .archive-template .main-header:after {
     display: none
 }
+
+
 /* Appears in the top left corner of your home page */
 
 .blog-logo {
@@ -934,7 +915,6 @@ body.nav-opened .nav {
     float: left;
     background: none !important;
     /* Makes sure there is never a background */
-    
     border: none !important;
     /* Makes sure there is never a border */
 }
@@ -984,6 +964,8 @@ body.nav-opened .nav {
 .menu-button:focus {
     outline: 0;
 }
+
+
 /* When the navigation is closed */
 
 .nav-closed .menu-button {
@@ -994,6 +976,8 @@ body.nav-opened .nav {
 .nav-closed .menu-button:hover {
     color: #222;
 }
+
+
 /* When the navigation is closed and there is no cover image */
 
 .nav-closed .no-cover .menu-button {
@@ -1005,6 +989,8 @@ body.nav-opened .nav {
     border-color: #555;
     color: #555;
 }
+
+
 /* When the navigation is opened */
 
 .nav-opened .menu-button {
@@ -1022,6 +1008,8 @@ body.nav-opened .nav {
     opacity: 0;
     transition: all 0.3s ease;
 }
+
+
 /* Special styles when overlaid on an image*/
 
 .main-nav.overlay {
@@ -1037,6 +1025,8 @@ body.nav-opened .nav {
 .no-cover .main-nav.overlay {
     background: none;
 }
+
+
 /* The details of your blog. Defined in ghost/settings/ */
 
 .page-title {
@@ -1071,6 +1061,8 @@ body.nav-opened .nav {
 .no-cover .page-description {
     color: rgba(0, 0, 0, 0.5);
 }
+
+
 /* Add subtle load-in animation for content on the home page */
 
 .home-template .page-title {
@@ -1086,6 +1078,8 @@ body.nav-opened .nav {
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
+
+
 /* Every post, on every page, gets this style on its <article> tag */
 
 .post {
@@ -1097,6 +1091,8 @@ body.nav-opened .nav {
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
 }
+
+
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 
@@ -1211,6 +1207,8 @@ body:not(.post-template) .post-title {
     font-size: 1.4rem;
     line-height: 1.5em;
 }
+
+
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
@@ -1232,6 +1230,8 @@ body:not(.post-template) .post-title {
     margin: 0;
     border: none;
 }
+
+
 /* Stop elements, such as img wider than the post content, from
    creating horizontal scroll - slight hack due to imperfections
    with browser width % calculations and rounding */
@@ -1239,6 +1239,8 @@ body:not(.post-template) .post-title {
 .post-template .content {
     overflow: hidden;
 }
+
+
 /* Tweak the .post wrapper style */
 
 .post-template .post {
@@ -1246,11 +1248,15 @@ body:not(.post-template) .post-title {
     border-bottom: none;
     padding-bottom: 0;
 }
+
+
 /* Kill that stylish little circle that was on the border, too */
 
 .post-template .post:after {
     display: none;
 }
+
+
 /* Keep images centered, and allow images wider than the main
    text column to break out. */
 
@@ -1263,15 +1269,12 @@ body:not(.post-template) .post-title {
        center of its container and (2) shifting the entire image
        in the opposite direction by half its own width.
        Works for images that are larger than their containers. */
-    
     position: relative;
     left: 50%;
     -webkit-transform: translateX(-50%);
     /* for Safari and iOS */
-    
     -ms-transform: translateX(-50%);
     /* for IE9 */
-    
     transform: translateX(-50%);
 }
 
@@ -1292,6 +1295,8 @@ body:not(.post-template) .post-title {
 .footnotes p a:last-child {
     text-decoration: none;
 }
+
+
 /* The author credit area after the post */
 
 .post-footer {
@@ -1311,6 +1316,8 @@ body:not(.post-template) .post-title {
     font-size: 1.4rem;
     line-height: 1.75em;
 }
+
+
 /* list of author links - location / url */
 
 .author-meta {
@@ -1330,6 +1337,8 @@ body:not(.post-template) .post-title {
 .author-meta a:hover {
     color: #111;
 }
+
+
 /* Create some space to the right for the share links */
 
 .post-footer .author {
@@ -1344,6 +1353,8 @@ body:not(.post-template) .post-title {
 .post-footer h4 a:hover {
     text-decoration: underline;
 }
+
+
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
@@ -1375,6 +1386,8 @@ body:not(.post-template) .post-title {
 .post-footer .share .icon-google-plus:hover {
     color: #dd4b39;
 }
+
+
 /* ==========================================================================
    6. Author profile
    ========================================================================== */
@@ -1412,6 +1425,8 @@ body:not(.post-template) .post-title {
     border-bottom: #EBF2F6 1px solid;
     text-align: center;
 }
+
+
 /* Add a little circle in the middle of the border-bottom */
 
 .author-profile:after {
@@ -1485,6 +1500,8 @@ body:not(.post-template) .post-title {
 .author-meta {
     margin: 1.6rem 0;
 }
+
+
 /* Location, website, and link */
 
 .author-profile .author-meta {
@@ -1503,12 +1520,16 @@ body:not(.post-template) .post-title {
 .author-meta a {
     text-decoration: none;
 }
+
+
 /* Turn off meta for page2+ to make room for extra
    pagination prev/next links */
 
 .archive-template .author-profile .author-meta {
     display: none;
 }
+
+
 /* ==========================================================================
    7. Read More - Next/Prev Post Links
    ========================================================================== */
@@ -1597,6 +1618,8 @@ body:not(.post-template) .post-title {
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
 }
+
+
 /* Special styles for posts with no cover images */
 
 .read-next-story.no-cover {
@@ -1619,11 +1642,15 @@ body:not(.post-template) .post-title {
 .read-next-story.no-cover p {
     color: rgba(0, 0, 0, 0.5);
 }
+
+
 /* if there are two posts without covers, put a border between them */
 
 .read-next-story.no-cover + .read-next-story.no-cover {
     border-left: rgba(0, 0, 100, 0.04) 1px solid;
 }
+
+
 /* Correctly position site-footer when next to the .read-next container */
 
 .read-next + .site-footer {
@@ -1633,9 +1660,13 @@ body:not(.post-template) .post-title {
     right: 0;
     margin: 0;
 }
+
+
 /* ==========================================================================
    8. Third Party Elements - Embeds from other services
    ========================================================================== */
+
+
 /* Github */
 
 .gist table {
@@ -1650,14 +1681,20 @@ body:not(.post-template) .post-title {
 .gist .line-number {
     min-width: 25px;
 }
+
+
 /* Pastebin */
 
 .content .embedPastebin {
     margin-bottom: 1.75em;
 }
+
+
 /* ==========================================================================
    9. Pagination - Tools to let you flick between pages
    ========================================================================== */
+
+
 /* The main wrapper for our pagination links */
 
 .pagination {
@@ -1675,10 +1712,11 @@ body:not(.post-template) .post-title {
     color: #9EABB3;
     transition: all 0.2s ease;
 }
+
+
 /* Push the previous/next links out to the left/right */
 
-.older-posts,
-.newer-posts {
+.older-posts, .newer-posts {
     position: absolute;
     display: inline-block;
     padding: 0 15px;
@@ -1702,8 +1740,7 @@ body:not(.post-template) .post-title {
     left: 0;
 }
 
-.older-posts:hover,
-.newer-posts:hover {
+.older-posts:hover, .newer-posts:hover {
     color: #889093;
     border-color: #98a0a4;
 }
@@ -1731,16 +1768,22 @@ body:not(.post-template) .post-title {
 .extra-pagination .pagination {
     width: auto;
 }
+
+
 /* On page2+ make all the headers smaller */
 
 .archive-template .main-header {
     max-height: 30vh;
 }
+
+
 /* On page2+ show extra pagination controls at the top of post list */
 
 .archive-template .extra-pagination {
     display: block;
 }
+
+
 /* ==========================================================================
    10. Footer - The bottom of every page
    ========================================================================== */
@@ -1777,6 +1820,8 @@ body:not(.post-template) .post-title {
     width: 45%;
     float: left;
 }
+
+
 /* ==========================================================================
    11. Media Queries - Smaller than 900px
    ========================================================================== */
@@ -1794,8 +1839,7 @@ body:not(.post-template) .post-title {
         height: 60vh;
         padding: 15% 0;
     }
-    .scroll-down,
-    .home-template .main-header:after {
+    .scroll-down, .home-template .main-header:after {
         display: none;
     }
     .archive-template .main-header {
@@ -1822,8 +1866,7 @@ body:not(.post-template) .post-title {
     hr {
         margin: 2.4em 0;
     }
-    ol,
-    ul {
+    ol, ul {
         padding-left: 2em;
     }
     h1 {
@@ -1861,8 +1904,7 @@ body:not(.post-template) .post-title {
     .post-head.main-header {
         height: 45vh;
     }
-    .tag-head.main-header,
-    .author-head.main-header {
+    .tag-head.main-header, .author-head.main-header {
         height: 30vh;
     }
     .no-cover.post-head.main-header {
@@ -1888,6 +1930,8 @@ body:not(.post-template) .post-title {
         border-left: none;
     }
 }
+
+
 /* ==========================================================================
    12. Media Queries - Smaller than 500px
    ========================================================================== */
@@ -1955,8 +1999,7 @@ body:not(.post-template) .post-title {
     .nav ul {
         padding: 60px 9% 5%;
     }
-    .inner,
-    .pagination {
+    .inner, .pagination {
         width: auto;
         margin: 2rem auto;
     }
@@ -1981,10 +2024,7 @@ body:not(.post-template) .post-title {
     hr {
         margin: 1.75em 0;
     }
-    p,
-    ul,
-    ol,
-    dl {
+    p, ul, ol, dl {
         font-size: 0.95em;
         margin: 0 0 2.5rem 0;
     }
@@ -1997,12 +2037,7 @@ body:not(.post-template) .post-title {
     .page-description {
         font-size: 1.6rem;
     }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h1, h2, h3, h4, h5, h6 {
         margin: 0 0 0.3em 0;
     }
     h1 {
@@ -2035,7 +2070,6 @@ body:not(.post-template) .post-title {
         padding: 0;
         width: calc(100% + 32px);
         /* expand with to image + margins */
-        
         min-width: 0;
         max-width: 112%;
         /* fallback when calc doesn't work */
@@ -2068,8 +2102,7 @@ body:not(.post-template) .post-title {
     .author-meta li:before {
         display: none;
     }
-    .older-posts,
-    .newer-posts {
+    .older-posts, .newer-posts {
         position: static;
         margin: 10px 0;
     }
@@ -2085,8 +2118,7 @@ body:not(.post-template) .post-title {
     .post-head.main-header {
         height: 30vh;
     }
-    .tag-head.main-header,
-    .author-head.main-header {
+    .tag-head.main-header, .author-head.main-header {
         height: 20vh;
     }
     .author-profile .author-image {
@@ -2106,9 +2138,13 @@ body:not(.post-template) .post-title {
         width: 100%;
     }
 }
+
+
 /* ==========================================================================
    13. Animations
    ========================================================================== */
+
+
 /* Used to fade in title/desc on the home page */
 
 @-webkit-keyframes fade-in-down {
@@ -2136,6 +2172,8 @@ body:not(.post-template) .post-title {
         transform: translateY(0);
     }
 }
+
+
 /* Used to bounce .scroll-down on home page */
 
 @-webkit-keyframes bounce {
@@ -2167,10 +2205,14 @@ body:not(.post-template) .post-title {
         transform: translateY(-5px) rotate(-90deg);
     }
 }
+
+
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
+
 /*!
  * minimum set of bootstrap includes for most embed components
  */
@@ -2241,44 +2283,13 @@ body:not(.post-template) .post-title {
     box-sizing: content-box
 }
 
-#ds-reset input[type=button],
-#ds-reset input[type=submit],
-#ds-reset input[type=reset],
-#ds-reset button {
+#ds-reset input[type=button], #ds-reset input[type=submit], #ds-reset input[type=reset], #ds-reset button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
 
-#ds-reset div,
-#ds-reset ul,
-#ds-reset ol,
-#ds-reset li,
-#ds-reset ul li,
-#ds-reset ol li,
-#ds-reset iframe,
-#ds-reset h1,
-#ds-reset h2,
-#ds-reset h3,
-#ds-reset h4,
-#ds-reset h5,
-#ds-reset h6,
-#ds-reset p,
-#ds-reset img,
-#ds-reset blockquote,
-#ds-reset a,
-#ds-reset span,
-#ds-reset pre,
-#ds-reset code,
-#ds-reset strong,
-#ds-reset sub,
-#ds-reset sup,
-#ds-reset fieldset,
-#ds-reset form,
-#ds-reset label,
-#ds-reset input,
-#ds-reset textarea,
-#ds-reset select {
+#ds-reset div, #ds-reset ul, #ds-reset ol, #ds-reset li, #ds-reset ul li, #ds-reset ol li, #ds-reset iframe, #ds-reset h1, #ds-reset h2, #ds-reset h3, #ds-reset h4, #ds-reset h5, #ds-reset h6, #ds-reset p, #ds-reset img, #ds-reset blockquote, #ds-reset a, #ds-reset span, #ds-reset pre, #ds-reset code, #ds-reset strong, #ds-reset sub, #ds-reset sup, #ds-reset fieldset, #ds-reset form, #ds-reset label, #ds-reset input, #ds-reset textarea, #ds-reset select {
     border: 0;
     padding: 0;
     margin: 0;
@@ -2301,29 +2312,21 @@ body:not(.post-template) .post-title {
     clear: none
 }
 
-#ds-reset span,
-#ds-reset strong,
-#ds-reset label,
-#ds-reset input {
+#ds-reset span, #ds-reset strong, #ds-reset label, #ds-reset input {
     display: inline;
     margin: 0
 }
 
-#ds-reset textarea:focus,
-#ds-reset input:focus {
+#ds-reset textarea:focus, #ds-reset input:focus {
     outline: none
 }
 
-#ds-reset ul,
-#ds-reset ol,
-#ds-reset ul li,
-#ds-reset ol li {
+#ds-reset ul, #ds-reset ol, #ds-reset ul li, #ds-reset ol li {
     list-style: none;
     display: block
 }
 
-#ds-reset input,
-#ds-reset button {
+#ds-reset input, #ds-reset button {
     -webkit-border-radius: 0;
     border-radius: 0
 }
@@ -2446,8 +2449,7 @@ body:not(.post-template) .post-title {
     color: #333
 }
 
-#ds-reset .ds-service-icon,
-#ds-reset .ds-service-icon-grey {
+#ds-reset .ds-service-icon, #ds-reset .ds-service-icon-grey {
     width: 16px !important;
     height: 16px !important;
     line-height: 100px;
@@ -2714,8 +2716,7 @@ body:not(.post-template) .post-title {
     color: #333
 }
 
-#ds-thread #ds-reset ul,
-#ds-thread #ds-reset ul li {
+#ds-thread #ds-reset ul, #ds-thread #ds-reset ul li {
     background: none;
     margin: 0;
     padding: 0
@@ -3079,8 +3080,7 @@ body:not(.post-template) .post-title {
     right: 10px
 }
 
-#ds-thread #ds-reset .ds-textarea-wrapper textarea,
-#ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text {
+#ds-thread #ds-reset .ds-textarea-wrapper textarea, #ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text {
     display: block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -3094,10 +3094,7 @@ body:not(.post-template) .post-title {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6)
 }
 
-#ds-thread #ds-reset .ds-post-toolbar span,
-#ds-thread #ds-reset .ds-post-toolbar input,
-#ds-thread #ds-reset .ds-post-toolbar label,
-#ds-thread #ds-reset .ds-post-toolbar a {
+#ds-thread #ds-reset .ds-post-toolbar span, #ds-thread #ds-reset .ds-post-toolbar input, #ds-thread #ds-reset .ds-post-toolbar label, #ds-thread #ds-reset .ds-post-toolbar a {
     vertical-align: middle;
     width: auto
 }
@@ -3174,8 +3171,7 @@ body:not(.post-template) .post-title {
     color: #555
 }
 
-#ds-thread #ds-reset .ds-sync a.ds-service-icon,
-#ds-thread #ds-reset .ds-sync a.ds-service-icon-grey {
+#ds-thread #ds-reset .ds-sync a.ds-service-icon, #ds-thread #ds-reset .ds-sync a.ds-service-icon-grey {
     margin: 7px 2px 7px 3px
 }
 
@@ -3243,8 +3239,7 @@ body:not(.post-template) .post-title {
     color: #333
 }
 
-#ds-thread #ds-reset .ds-sort a.ds-current,
-#ds-thread #ds-reset .ds-sort a:active {
+#ds-thread #ds-reset .ds-sort a.ds-current, #ds-thread #ds-reset .ds-sort a:active {
     color: #017cb9
 }
 
@@ -3324,13 +3319,11 @@ body:not(.post-template) .post-title {
     visibility: hidden
 }
 
-#ds-thread #ds-reset .ds-post-self:hover .ds-post-delete,
-#ds-thread #ds-reset .ds-post-self:hover .ds-post-report {
+#ds-thread #ds-reset .ds-post-self:hover .ds-post-delete, #ds-thread #ds-reset .ds-post-self:hover .ds-post-report {
     display: inline-block
 }
 
-#ds-thread #ds-reset.ds-touch .ds-post-self .ds-post-delete,
-#ds-thread #ds-reset.ds-touch .ds-post-self .ds-post-report {
+#ds-thread #ds-reset.ds-touch .ds-post-self .ds-post-delete, #ds-thread #ds-reset.ds-touch .ds-post-self .ds-post-report {
     display: inline-block
 }
 
@@ -3515,8 +3508,7 @@ body:not(.post-template) .post-title {
     opacity: 1
 }
 
-#ds-thread #ds-reset .ds-post-delete,
-#ds-thread #ds-reset .ds-post-report {
+#ds-thread #ds-reset .ds-post-delete, #ds-thread #ds-reset .ds-post-report {
     display: none
 }
 
@@ -3613,8 +3605,7 @@ body:not(.post-template) .post-title {
     border: 1px solid transparent
 }
 
-#ds-thread #ds-reset .ds-paginator a:hover,
-#ds-thread #ds-reset .ds-paginator a.ds-current {
+#ds-thread #ds-reset .ds-paginator a:hover, #ds-thread #ds-reset .ds-paginator a.ds-current {
     -webkit-border-radius: 0;
     border-radius: 0;
     background-color: rgba(0, 0, 0, 0.03)
@@ -3664,8 +3655,7 @@ body:not(.post-template) .post-title {
     border-top: 1px solid #ddd
 }
 
-#ds-thread #ds-reset.ds-no-opacity .ds-comments,
-#ds-thread #ds-reset.ds-no-opacity .ds-paginator {
+#ds-thread #ds-reset.ds-no-opacity .ds-comments, #ds-thread #ds-reset.ds-no-opacity .ds-paginator {
     border-bottom: 1px solid #ddd
 }
 
@@ -3677,8 +3667,7 @@ body:not(.post-template) .post-title {
     background: #f8f8f8
 }
 
-#ds-thread #ds-reset.ds-ie6 .ds-post-report,
-#ds-thread #ds-reset.ds-ie6 .ds-post-delete {
+#ds-thread #ds-reset.ds-ie6 .ds-post-report, #ds-thread #ds-reset.ds-ie6 .ds-post-delete {
     display: inline !important
 }
 
@@ -3713,8 +3702,7 @@ body:not(.post-template) .post-title {
     padding: 8px
 }
 
-#ds-thread.ds-narrow #ds-reset .ds-comment-body,
-#ds-thread.ds-narrow #ds-reset .ds-replybox {
+#ds-thread.ds-narrow #ds-reset .ds-comment-body, #ds-thread.ds-narrow #ds-reset .ds-replybox {
     padding-left: 38px
 }
 
@@ -3834,8 +3822,7 @@ body:not(.post-template) .post-title {
     color: #777
 }
 
-#ds-wrapper .ds-dialog,
-#ds-wrapper #ds-reset.ds-dialog {
+#ds-wrapper .ds-dialog, #ds-wrapper #ds-reset.ds-dialog {
     margin: 0 auto;
     text-align: left;
     _zoom: 1;
@@ -4009,8 +3996,7 @@ body:not(.post-template) .post-title {
     word-wrap: break-word
 }
 
-#ds-wrapper #ds-reset .ds-textarea-wrapper textarea,
-#ds-wrapper #ds-reset .ds-textarea-wrapper .ds-hidden-text {
+#ds-wrapper #ds-reset .ds-textarea-wrapper textarea, #ds-wrapper #ds-reset .ds-textarea-wrapper .ds-hidden-text {
     font-size: 13px;
     line-height: 1.5em
 }
@@ -4238,18 +4224,14 @@ body:not(.post-template) .post-title {
     margin: 0 5px 0 0
 }
 
-#ds-share #ds-reset.ds-share-aside-left ul,
-#ds-share #ds-reset.ds-share-aside-right ul,
-#ds-share #ds-reset.ds-share-inline ul {
+#ds-share #ds-reset.ds-share-aside-left ul, #ds-share #ds-reset.ds-share-aside-right ul, #ds-share #ds-reset.ds-share-inline ul {
     list-style: none;
     margin: 0;
     padding: 0;
     *zoom: 1
 }
 
-#ds-share #ds-reset.ds-share-aside-left ul:after,
-#ds-share #ds-reset.ds-share-aside-right ul:after,
-#ds-share #ds-reset.ds-share-inline ul:after {
+#ds-share #ds-reset.ds-share-aside-left ul:after, #ds-share #ds-reset.ds-share-aside-right ul:after, #ds-share #ds-reset.ds-share-inline ul:after {
     content: ".";
     display: block;
     height: 0;
@@ -4257,9 +4239,7 @@ body:not(.post-template) .post-title {
     visibility: hidden
 }
 
-#ds-share #ds-reset.ds-share-aside-left ul li,
-#ds-share #ds-reset.ds-share-aside-right ul li,
-#ds-share #ds-reset.ds-share-inline ul li {
+#ds-share #ds-reset.ds-share-aside-left ul li, #ds-share #ds-reset.ds-share-aside-right ul li, #ds-share #ds-reset.ds-share-inline ul li {
     list-style: none;
     float: left;
     font-size: 14px;
@@ -4278,8 +4258,7 @@ body:not(.post-template) .post-title {
     margin-left: 0
 }
 
-#ds-share #ds-reset.ds-share-aside-left,
-#ds-share #ds-reset.ds-share-aside-right {
+#ds-share #ds-reset.ds-share-aside-left, #ds-share #ds-reset.ds-share-aside-right {
     position: fixed;
     top: 50%;
     z-index: 1000;
@@ -4357,34 +4336,7 @@ body:not(.post-template) .post-title {
     transform: translate(0, -50%)
 }
 
-#ds-share #ds-reset .ds-share-icons-32 .ds-weibo,
-#ds-share #ds-reset .ds-share-icons-32 .ds-sohu,
-#ds-share #ds-reset .ds-share-icons-32 .ds-renren,
-#ds-share #ds-reset .ds-share-icons-32 .ds-netease,
-#ds-share #ds-reset .ds-share-icons-32 .ds-qqt,
-#ds-share #ds-reset .ds-share-icons-32 .ds-kaixin,
-#ds-share #ds-reset .ds-share-icons-32 .ds-douban,
-#ds-share #ds-reset .ds-share-icons-32 .ds-msn,
-#ds-share #ds-reset .ds-share-icons-32 .ds-qzone,
-#ds-share #ds-reset .ds-share-icons-32 .ds-duoshuo,
-#ds-share #ds-reset .ds-share-icons-32 .ds-360,
-#ds-share #ds-reset .ds-share-icons-32 .ds-alipay,
-#ds-share #ds-reset .ds-share-icons-32 .ds-qq,
-#ds-share #ds-reset .ds-share-icons-32 .ds-baidu,
-#ds-share #ds-reset .ds-share-icons-32 .ds-taobao,
-#ds-share #ds-reset .ds-share-icons-32 .ds-google,
-#ds-share #ds-reset .ds-share-icons-32 .ds-more,
-#ds-share #ds-reset .ds-share-icons-32 .ds-wechat,
-#ds-share #ds-reset .ds-share-icons-32 .ds-diandian,
-#ds-share #ds-reset .ds-share-icons-32 .ds-huaban,
-#ds-share #ds-reset .ds-share-icons-32 .ds-duitang,
-#ds-share #ds-reset .ds-share-icons-32 .ds-youdao,
-#ds-share #ds-reset .ds-share-icons-32 .ds-pengyou,
-#ds-share #ds-reset .ds-share-icons-32 .ds-facebook,
-#ds-share #ds-reset .ds-share-icons-32 .ds-twitter,
-#ds-share #ds-reset .ds-share-icons-32 .ds-linkedin,
-#ds-share #ds-reset .ds-share-icons-32 .ds-meilishuo,
-#ds-share #ds-reset .ds-share-icons-32 .ds-mogujie {
+#ds-share #ds-reset .ds-share-icons-32 .ds-weibo, #ds-share #ds-reset .ds-share-icons-32 .ds-sohu, #ds-share #ds-reset .ds-share-icons-32 .ds-renren, #ds-share #ds-reset .ds-share-icons-32 .ds-netease, #ds-share #ds-reset .ds-share-icons-32 .ds-qqt, #ds-share #ds-reset .ds-share-icons-32 .ds-kaixin, #ds-share #ds-reset .ds-share-icons-32 .ds-douban, #ds-share #ds-reset .ds-share-icons-32 .ds-msn, #ds-share #ds-reset .ds-share-icons-32 .ds-qzone, #ds-share #ds-reset .ds-share-icons-32 .ds-duoshuo, #ds-share #ds-reset .ds-share-icons-32 .ds-360, #ds-share #ds-reset .ds-share-icons-32 .ds-alipay, #ds-share #ds-reset .ds-share-icons-32 .ds-qq, #ds-share #ds-reset .ds-share-icons-32 .ds-baidu, #ds-share #ds-reset .ds-share-icons-32 .ds-taobao, #ds-share #ds-reset .ds-share-icons-32 .ds-google, #ds-share #ds-reset .ds-share-icons-32 .ds-more, #ds-share #ds-reset .ds-share-icons-32 .ds-wechat, #ds-share #ds-reset .ds-share-icons-32 .ds-diandian, #ds-share #ds-reset .ds-share-icons-32 .ds-huaban, #ds-share #ds-reset .ds-share-icons-32 .ds-duitang, #ds-share #ds-reset .ds-share-icons-32 .ds-youdao, #ds-share #ds-reset .ds-share-icons-32 .ds-pengyou, #ds-share #ds-reset .ds-share-icons-32 .ds-facebook, #ds-share #ds-reset .ds-share-icons-32 .ds-twitter, #ds-share #ds-reset .ds-share-icons-32 .ds-linkedin, #ds-share #ds-reset .ds-share-icons-32 .ds-meilishuo, #ds-share #ds-reset .ds-share-icons-32 .ds-mogujie {
     height: 32px;
     width: 32px;
     text-decoration: none;
@@ -4513,34 +4465,7 @@ body:not(.post-template) .post-title {
     _background-image: url("//static.duoshuo.com/images/service-icons-color-flat-32.gif")
 }
 
-#ds-share #ds-reset .ds-share-icons-16 .ds-weibo,
-#ds-share #ds-reset .ds-share-icons-16 .ds-sohu,
-#ds-share #ds-reset .ds-share-icons-16 .ds-renren,
-#ds-share #ds-reset .ds-share-icons-16 .ds-netease,
-#ds-share #ds-reset .ds-share-icons-16 .ds-qqt,
-#ds-share #ds-reset .ds-share-icons-16 .ds-kaixin,
-#ds-share #ds-reset .ds-share-icons-16 .ds-douban,
-#ds-share #ds-reset .ds-share-icons-16 .ds-msn,
-#ds-share #ds-reset .ds-share-icons-16 .ds-qzone,
-#ds-share #ds-reset .ds-share-icons-16 .ds-duoshuo,
-#ds-share #ds-reset .ds-share-icons-16 .ds-360,
-#ds-share #ds-reset .ds-share-icons-16 .ds-alipay,
-#ds-share #ds-reset .ds-share-icons-16 .ds-qq,
-#ds-share #ds-reset .ds-share-icons-16 .ds-baidu,
-#ds-share #ds-reset .ds-share-icons-16 .ds-taobao,
-#ds-share #ds-reset .ds-share-icons-16 .ds-google,
-#ds-share #ds-reset .ds-share-icons-16 .ds-more,
-#ds-share #ds-reset .ds-share-icons-16 .ds-wechat,
-#ds-share #ds-reset .ds-share-icons-16 .ds-diandian,
-#ds-share #ds-reset .ds-share-icons-16 .ds-huaban,
-#ds-share #ds-reset .ds-share-icons-16 .ds-duitang,
-#ds-share #ds-reset .ds-share-icons-16 .ds-youdao,
-#ds-share #ds-reset .ds-share-icons-16 .ds-pengyou,
-#ds-share #ds-reset .ds-share-icons-16 .ds-facebook,
-#ds-share #ds-reset .ds-share-icons-16 .ds-twitter,
-#ds-share #ds-reset .ds-share-icons-16 .ds-linkedin,
-#ds-share #ds-reset .ds-share-icons-16 .ds-meilishuo,
-#ds-share #ds-reset .ds-share-icons-16 .ds-mogujie {
+#ds-share #ds-reset .ds-share-icons-16 .ds-weibo, #ds-share #ds-reset .ds-share-icons-16 .ds-sohu, #ds-share #ds-reset .ds-share-icons-16 .ds-renren, #ds-share #ds-reset .ds-share-icons-16 .ds-netease, #ds-share #ds-reset .ds-share-icons-16 .ds-qqt, #ds-share #ds-reset .ds-share-icons-16 .ds-kaixin, #ds-share #ds-reset .ds-share-icons-16 .ds-douban, #ds-share #ds-reset .ds-share-icons-16 .ds-msn, #ds-share #ds-reset .ds-share-icons-16 .ds-qzone, #ds-share #ds-reset .ds-share-icons-16 .ds-duoshuo, #ds-share #ds-reset .ds-share-icons-16 .ds-360, #ds-share #ds-reset .ds-share-icons-16 .ds-alipay, #ds-share #ds-reset .ds-share-icons-16 .ds-qq, #ds-share #ds-reset .ds-share-icons-16 .ds-baidu, #ds-share #ds-reset .ds-share-icons-16 .ds-taobao, #ds-share #ds-reset .ds-share-icons-16 .ds-google, #ds-share #ds-reset .ds-share-icons-16 .ds-more, #ds-share #ds-reset .ds-share-icons-16 .ds-wechat, #ds-share #ds-reset .ds-share-icons-16 .ds-diandian, #ds-share #ds-reset .ds-share-icons-16 .ds-huaban, #ds-share #ds-reset .ds-share-icons-16 .ds-duitang, #ds-share #ds-reset .ds-share-icons-16 .ds-youdao, #ds-share #ds-reset .ds-share-icons-16 .ds-pengyou, #ds-share #ds-reset .ds-share-icons-16 .ds-facebook, #ds-share #ds-reset .ds-share-icons-16 .ds-twitter, #ds-share #ds-reset .ds-share-icons-16 .ds-linkedin, #ds-share #ds-reset .ds-share-icons-16 .ds-meilishuo, #ds-share #ds-reset .ds-share-icons-16 .ds-mogujie {
     line-height: 16px;
     padding-left: 20px;
     text-decoration: none;
@@ -4727,8 +4652,7 @@ body:not(.post-template) .post-title {
     transform: none
 }
 
-#ds-share .ds-share-aside-left,
-#ds-share .ds-share-aside-right {
+#ds-share .ds-share-aside-left, #ds-share .ds-share-aside-right {
     width: 230px;
     _position: absolute;
     _bottom: auto;
@@ -4744,18 +4668,15 @@ body:not(.post-template) .post-title {
     _left: expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft, 10)||0)-(parseInt(this.currentStyle.marginRight, 10)||0 - 230))
 }
 
-#ds-wrapper #ds-reset .ds-unread-list li a:hover,
-#ds-thread #ds-reset .ds-login-buttons .ds-more-services:hover {
+#ds-wrapper #ds-reset .ds-unread-list li a:hover, #ds-thread #ds-reset .ds-login-buttons .ds-more-services:hover {
     text-decoration: underline
 }
 
-#ds-thread #ds-reset .ds-comment-body,
-#ds-thread #ds-reset ul.ds-children .ds-comment-body {
+#ds-thread #ds-reset .ds-comment-body, #ds-thread #ds-reset ul.ds-children .ds-comment-body {
     padding-left: 40px
 }
 
-#ds-thread #ds-reset .ds-comments,
-#ds-thread #ds-reset .ds-paginator {
+#ds-thread #ds-reset .ds-comments, #ds-thread #ds-reset .ds-paginator {
     border-bottom: 1px dotted #ddd
 }
 
@@ -4765,25 +4686,17 @@ body:not(.post-template) .post-title {
     margin-left: 3px
 }
 
-#ds-thread #ds-reset button:hover,
-#ds-thread #ds-reset button:active,
-#ds-thread #ds-reset a.ds-unread-comments-count:hover,
-#ds-thread #ds-reset .ds-post-button:hover {
+#ds-thread #ds-reset button:hover, #ds-thread #ds-reset button:active, #ds-thread #ds-reset a.ds-unread-comments-count:hover, #ds-thread #ds-reset .ds-post-button:hover {
     background: #40c8c9;
     color: #fff;
     box-shadow: none
 }
 
-#ds-reset .ds-highlight,
-#ds-thread #ds-reset .ds-login-buttons .ds-more-services,
-#ds-thread #ds-reset .ds-login-buttons .ds-more-services:hover {
+#ds-reset .ds-highlight, #ds-thread #ds-reset .ds-login-buttons .ds-more-services, #ds-thread #ds-reset .ds-login-buttons .ds-more-services:hover {
     color: #999
 }
 
-#ds-thread #ds-reset ul.ds-comments-tabs .ds-highlight,
-#ds-notify #ds-reset ul.ds-notify-unread li a,
-#ds-wrapper #ds-reset .ds-unread-list li a,
-#ds-wrapper #ds-reset .ds-unread-list li a:hover {
+#ds-thread #ds-reset ul.ds-comments-tabs .ds-highlight, #ds-notify #ds-reset ul.ds-notify-unread li a, #ds-wrapper #ds-reset .ds-unread-list li a, #ds-wrapper #ds-reset .ds-unread-list li a:hover {
     color: #2cb4bf
 }
 
@@ -4892,16 +4805,15 @@ body:not(.post-template) .post-title {
     font-size: 14px
 }
 
-#ds-thread #ds-reset #ds-bubble,
-#ds-notify,
-#ds-smilies-tooltip,
-#ds-thread #ds-reset .ds-account-control ul {
+#ds-thread #ds-reset #ds-bubble, #ds-notify, #ds-smilies-tooltip, #ds-thread #ds-reset .ds-account-control ul {
     box-shadow: none
 }
 
 #ds-thread #ds-reset #ds-user-card .ds-user-card-meta {
     margin: 14px 0 0 42px
 }
+
+
 /*多说样式修改版*/
 
 #ds-reset .ds-avatar {
@@ -4909,8 +4821,7 @@ body:not(.post-template) .post-title {
     box-shadow: none !important;
 }
 
-#ds-reset .ds-avatar img,
-#ds-thread #ds-reset ul.ds-children .ds-avatar img {
+#ds-reset .ds-avatar img, #ds-thread #ds-reset ul.ds-children .ds-avatar img {
     width: 50px !important;
     height: 50px !important;
     -webkit-transition: .8s;
@@ -4940,13 +4851,11 @@ body:not(.post-template) .post-title {
     border-radius: 30px !important;
 }
 
-#ds-thread #ds-reset .ds-comment-body,
-#ds-thread #ds-reset ul.ds-children .ds-comment-body {
+#ds-thread #ds-reset .ds-comment-body, #ds-thread #ds-reset ul.ds-children .ds-comment-body {
     padding-left: 70px !important;
 }
 
-#ds-thread #ds-reset .ds-comment-body,
-#ds-thread #ds-reset ul.ds-children .ds-comment-body {
+#ds-thread #ds-reset .ds-comment-body, #ds-thread #ds-reset ul.ds-children .ds-comment-body {
     padding-left: 70px !important;
 }
 
@@ -4969,4 +4878,6 @@ body:not(.post-template) .post-title {
 #ds-recent-comments li.ds-comment:nth-of-type(1) {
     border: none !important;
 }
+
+
 /*duoshuo end*/

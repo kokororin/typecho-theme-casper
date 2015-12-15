@@ -113,7 +113,7 @@
   <div id="ds-smilies-tooltip" style="display:none;">
    <div class="ds-smilies-container">
     <ul>
-     <?php kaomojiya();?>     
+
     </ul>
    </div>
   </div>

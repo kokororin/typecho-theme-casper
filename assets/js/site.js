@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
     jQuery('#mail').keyup(function() {
-        var avatar = 'https://cdn.v2ex.com/gravatar/' + hex_md5(jQuery(this).val()) + '?s=60&amp;r=G&amp;d=';
+        var avatar = casper.gravatar_prefix + hex_md5(jQuery(this).val()) + '?s=60&amp;r=G&amp;d=';
         jQuery('#ds-avatar').find('img').attr('src', avatar);
 
     });
@@ -30,39 +30,10 @@ jQuery(document).ready(function() {
             $container.toggle();
     });
 
+    jQuery('.pagination a:not(".older-posts"):not(".newer-posts")').hide();
+    //jQuery('.pagination span').remove();
 
-    jQuery('.kaomojiya').click(function() {
-        jQuery('#ds-smilies-tooltip').hide();
-        var field;
-        if (document.getElementById('textarea') && document.getElementById('textarea').type == 'textarea') {
-            field = document.getElementById('textarea');
-        } else {
-            return false;
-        }
-        var kaomojiya = jQuery(this).attr('alt');
-        if (document.selection) {
-            field.focus();
-            sel = document.selection.createRange();
-            sel.text = kaomojiya;
-            field.focus();
-        }
-        else if (field.selectionStart || field.selectionStart == '0') {
-            var startPos = field.selectionStart;
-            var endPos = field.selectionEnd;
-            var cursorPos = endPos;
-            field.value = field.value.substring(0, startPos)
-                          + kaomojiya
-                          + field.value.substring(endPos, field.value.length);
-            cursorPos += kaomojiya.length;
-            field.focus();
-            field.selectionStart = cursorPos;
-            field.selectionEnd = cursorPos;
-        }
-        else {
-            field.value += kaomojiya;
-            field.focus();
-        }
-    });
+
 
 });
 

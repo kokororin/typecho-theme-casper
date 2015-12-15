@@ -1,5 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
+<?php $this->need('functions.php'); ?>
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">        

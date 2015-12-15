@@ -13,22 +13,14 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('assets/css/style.css');?>"/>
-    <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?55a801b6ec7aa71e179849ec65881d2b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-   </script>
+
 
 <?php $this->header(); ?>
 </head>
-<body class="home-template nav-closed">
+<body class="<?php body_class($this)?>-template nav-closed">
     <div class="nav"> 
-   <h3 class="nav-title">菜单</h3> 
-   <a href="#" class="nav-close"> <span class="hidden">关闭</span> </a> 
+   <h3 class="nav-title">Menu</h3> 
+   <a href="#" class="nav-close"> <span class="hidden">Close</span> </a> 
    <ul> 
     <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
     <li class="nav-home" role="presentation"><a href="<?php $this->options->siteUrl(); ?>">首页</a></li> 

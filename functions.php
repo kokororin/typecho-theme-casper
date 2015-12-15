@@ -1,46 +1,55 @@
 <?php
-if (!defined('__TYPECHO_ROOT_DIR__')) {
-    exit;
+if (!defined('__TYPECHO_ROOT_DIR__'))
+{
+	exit;
 }
 
-function themeConfig($form)
+function body_class($archive)
 {
-    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', null, null, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
-    $form->addInput($logoUrl);
-
-    $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock',
-        array('ShowRecentPosts' => _t('显示最新文章'),
-            'ShowRecentComments'    => _t('显示最近回复'),
-            'ShowCategory'          => _t('显示分类'),
-            'ShowArchive'           => _t('显示归档'),
-            'ShowOther'             => _t('显示其它杂项')),
-        array('ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
-
-    $form->addInput($sidebarBlock->multiMode());
+	if ($archive->is('index'))
+	{
+		$class = 'home';
+	}
+	if ($archive->is('post'))
+	{
+		$class = 'post';
+	}
+	if ($archive->is('page'))
+	{
+		$class = 'post';
+	}
+	if ($archive->is('archive'))
+	{
+		$class = 'archive';
+	}
+	echo $class;
 }
 
-function getNearPost($cid)
+function gravatar_url($mail, $size, $echo = true)
 {
-    $db = Typecho_Db::get();
-
-    $prev = $db->fetchRow($db->select('title,cid')->from('table.contents')->where('cid > ? AND status = ? AND type = ?', $cid, 'publish', 'post')->order('cid', Typecho_Db::SORT_ASC));
-    $next = $db->fetchRow($db->select('title,cid')->from('table.contents')->where('cid < ? AND status = ? AND type = ?', $cid, 'publish', 'post')->order('cid', Typecho_Db::SORT_DESC));
-
+	$rating  = Helper::options()->commentsAvatarRating;
+	$Request = Typecho_Request::getInstance();
+	$default = null;
+	$url     = Typecho_Common::gravatarUrl($mail, $size, $rating, $default, $Request->isSecure());
+	if ($mail == '' && $size == '' && $echo == false)
+	{
+		$url = str_replace('?s=&amp;r=G&amp;d=', '', $url);
+		return $url;
+	}
+	$url = Typecho_Common::gravatarUrl($mail, $size, $rating, $default, $Request->isSecure());
+	if ($echo)
+	{
+		echo $url;
+	}
+	else
+	{
+		return $url;
+	}
 }
 
-function the_one()
+function footer_json()
 {
-    $getjson = 'http://api.hitokoto.us/rand?charset=utf-8';
-    $content = file_get_contents($getjson);
-    $array   = json_decode($content, true);
-    $words   = $array['hitokoto'];
-    echo $words;
-}
-
-function kaomojiya()
-{
-    $kaomojiya = array('|∀ﾟ', '(´ﾟДﾟ`)', '(;´Д`)', '(｀･ω･)', '(=ﾟωﾟ)=', '| ω・´)', '|-` )', '|д` )', '|ー` )', '|∀` )', '(つд⊂)', '(ﾟДﾟ≡ﾟДﾟ)', '(＾o＾)ﾉ', '(|||ﾟДﾟ)', '( ﾟ∀ﾟ)', '( ´∀`)', '(*´∀`)', '(*ﾟ∇ﾟ)', '(*ﾟーﾟ)', '(　ﾟ 3ﾟ)', '( ´ー`)', '( ・_ゝ・)', '( ´_ゝ`)', '(*´д`)', '(・ー・)', '(・∀・)', '(ゝ∀･)', '(〃∀〃)', '(*ﾟ∀ﾟ*)', '( ﾟ∀。)', '( `д´)', '(`ε´ )', '(`ヮ´ )', 'σ`∀´)', ' ﾟ∀ﾟ)σ', 'ﾟ ∀ﾟ)ノ', '(╬ﾟдﾟ)', '(|||ﾟдﾟ)', '( ﾟдﾟ)', 'Σ( ﾟдﾟ)', '( ;ﾟдﾟ)', '( ;´д`)', '(　д ) ﾟ ﾟ', '( ☉д⊙)', '(((　ﾟдﾟ)))', '( ` ・´)', '( ´д`)', '( -д-)', '(>д<)', '･ﾟ( ﾉд`ﾟ)', '( TдT)', '(￣∇￣)', '(￣3￣)', '(￣ｰ￣)', '(￣ . ￣)', '(￣皿￣)', '(￣艸￣)', '(￣︿￣)', '(￣︶￣)', 'ヾ(´ωﾟ｀)', '(*´ω`*)', '(・ω・)', '( ´・ω)', '(｀・ω)', '(´・ω・`)', '(`・ω・´)', '( `_っ´)', '( `ー´)', '( ´ρ`)', '( ﾟωﾟ)', '(oﾟωﾟo)', '(　^ω^)', '(｡◕∀◕｡)', '( ◕‿‿◕ )', 'ヾ(´ε`ヾ)', '(ノﾟ∀ﾟ)ノ', '(σﾟдﾟ)σ', '(σﾟ∀ﾟ)σ', '|дﾟ )', '┃電柱┃', 'ﾟ(つд`ﾟ)', 'ﾟÅﾟ )　', '⊂彡☆))д`)', '⊂彡☆))д´)', '⊂彡☆))∀`)', '(´∀((☆ミつ');
-    foreach ($kaomojiya as $key=>$value){
-        echo '<img class="kaomojiya" alt="'.$value.'" title="'.$value.'" />';
-    }
+	echo json_encode(array(
+		'gravatar_prefix' => gravatar_url('', '', false),
+	));
 }

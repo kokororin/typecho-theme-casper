@@ -3,7 +3,7 @@
 
    <header class="main-header tag-head " style="background-image: url(<?php $this->options->themeUrl('assets/imgs/Sora.jpg');?>)">
     <nav class="main-nav overlay clearfix">
-        <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">菜单</span></a>
+        <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">

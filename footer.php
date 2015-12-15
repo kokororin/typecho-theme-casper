@@ -7,7 +7,9 @@
 
 
 </div>
-
+<script>
+var casper = <?php footer_json();?>
+</script>
 <script src="<?php $this->options->themeUrl('assets/js/jquery.js');?>"></script>
 <script src="<?php $this->options->themeUrl('assets/js/jquery.fitvids.js');?>"></script>
 <script src="<?php $this->options->themeUrl('assets/js/index.js');?>"></script>

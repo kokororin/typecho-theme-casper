@@ -2,26 +2,26 @@
 /**
  * Casper
  * 
- * @package Casper
- * @version 0.1
- * @link https://return.moe/
+ * @package Typecho Casper Theme
+ * @version 0.2
+ * @link https://kotori.love/
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');
  ?>
 
-<header class="main-header " id="index-main-header" style="background-image: url(https://kotori.sinaapp.com/api.php?key=请叫我大心神，不然别想看图片&type=acg)">
+<header class="main-header " id="index-main-header" style="background-image: url(<?php $this->options->themeUrl('assets/imgs/Kotori.jpg')?>)">
     <nav class="main-nav overlay clearfix">
-        <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+        <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title"><?php $this->options->title() ?></h1>
-            <h2 class="page-description"><?php the_one(); ?></h2>
+            <h2 class="page-description"><?php $this->options->description() ?></h2>
         </div>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">下拉显示</span></a>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
 
 
